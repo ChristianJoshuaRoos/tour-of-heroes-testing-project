@@ -44,7 +44,7 @@ class Hero {
   }
 }
 
-describe('Tutorial part 6', () => {
+describe('Tour of Heroes Web Application', () => {
 
   beforeAll(() => browser.get(''));
 
@@ -108,7 +108,7 @@ describe('Tutorial part 6', () => {
 
     it(`cancels and shows ${targetHero.name} in Dashboard`, () => {
       element(by.buttonText('go back')).click();
-      browser.waitForAngular(); // seems necessary to gets tests to pass for toh-pt6
+      browser.waitForAngular(); //Seems necessary to get tests to pass for Tour of Heroes.
 
       let targetHeroElt = getPageElts().topHeroes.get(targetHeroDashboardIndex);
       expect(targetHeroElt.getText()).toEqual(targetHero.name);
@@ -120,7 +120,7 @@ describe('Tutorial part 6', () => {
 
     it(`saves and shows ${newHeroName} in Dashboard`, () => {
       element(by.buttonText('save')).click();
-      browser.waitForAngular(); // seems necessary to gets tests to pass for toh-pt6
+      browser.waitForAngular(); //Seems necessary to get tests to pass for Tour of Heroes.
 
       let targetHeroElt = getPageElts().topHeroes.get(targetHeroDashboardIndex);
       expect(targetHeroElt.getText()).toEqual(newHeroName);
